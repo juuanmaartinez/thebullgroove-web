@@ -10,7 +10,7 @@ const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), {
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
 export default function ContactForm() {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const recaptchaRef = useRef<any>(null);
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
