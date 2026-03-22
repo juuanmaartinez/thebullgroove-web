@@ -1,7 +1,11 @@
 'use client';
 
-import ReCAPTCHA from 'react-google-recaptcha';
+import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react';
+
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), {
+  ssr: false,
+});
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
