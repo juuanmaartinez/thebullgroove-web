@@ -1,0 +1,9 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Force binary files to never be text-processed
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
