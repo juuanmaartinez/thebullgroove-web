@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npx create-next-app@latest ./temp-nextapp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npx create-next-app@latest ./temp-nextapp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(printf \"n\\\\nn\\\\n\")",
+      "Bash(rm -rf 'D:\\\\proyectos\\\\MI WEB - THEBULLGROOVE/temp-nextapp')",
+      "Bash(printf nnnnnn:*)",
+      "Bash(npx create-next-app@latest ./temp-nextapp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack --yes)",
+      "Bash(mv temp-nextapp/* .)",
+      "Bash(mv temp-nextapp/.* .)",
+      "Bash(rm -rf temp-nextapp)",
+      "Bash(npm install:*)",
+      "Bash(npx husky:*)",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install Pillow -q)",
+      "Bash(python:*)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(rm -rf .next)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
