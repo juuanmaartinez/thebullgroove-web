@@ -1,5 +1,5 @@
-import ContactForm from '@/components/ContactForm';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 
 const services = [
   {
@@ -20,7 +20,7 @@ const services = [
     ),
     title: 'Desarrollo de Software a Medida',
     description:
-      'Aplicaciones web y sistemas a medida construidos con Next.js, React y Node.js — desde el diseño hasta el despliegue en producción.',
+      'Creamos aplicaciones web y sistemas personalizados diseñados para resolver los retos específicos de tu negocio. Desde el diseño inicial hasta el despliegue final, construimos software escalable que optimiza tu flujo de trabajo y mejora la experiencia de tus clientes.',
   },
   {
     icon: (
@@ -38,9 +38,9 @@ const services = [
         />
       </svg>
     ),
-    title: 'Automatizaciones',
+    title: 'Automatizaciones Inteligentes',
     description:
-      'Diseñamos flujos de trabajo con Make y Zapier para conectar tus sistemas, eliminar tareas manuales y escalar tu operación sin fricción.',
+      'Diseñamos flujos de trabajo que conectan tus sistemas para eliminar tareas manuales y reducir errores. Transformamos procesos operativos en ciclos automáticos, permitiendo que tu empresa escale su operación sin fricciones y tú recuperes tiempo valioso.',
   },
   {
     icon: (
@@ -58,9 +58,9 @@ const services = [
         />
       </svg>
     ),
-    title: 'Soporte IT Especializado',
+    title: 'Soporte IT Integral y Redes',
     description:
-      'Gestión y monitoreo de infraestructura con Zabbix y pfSense, soporte remoto y resolución proactiva antes de que los problemas impacten tu operación.',
+      'Gestión completa de tu infraestructura técnica: desde el soporte remoto en hardware y software hasta la configuración de redes seguras. Optimizamos el rendimiento de tus equipos a medida y resolvemos incidencias de forma proactiva para que tu actividad nunca se detenga.',
   },
 ];
 
@@ -73,39 +73,50 @@ export default function Home() {
       <section id="inicio" className="relative h-screen w-full overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/hero-bg.mp4"
+          src="/videotoro.mp4"
           autoPlay
           loop
           muted
           playsInline
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-          <p className="mb-6 text-xs font-semibold tracking-[0.4em] text-white/50 uppercase">
+          <p className="mb-4 text-xs font-semibold tracking-[0.5em] text-white/40 uppercase">
             Technology Services Agency
           </p>
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl lg:text-8xl">
+          <h1 className="text-6xl font-black tracking-tight text-white sm:text-8xl lg:text-9xl">
             THEBULL
-            <span className="text-white/30">GROOVE</span>
+            <span className="text-white/25">GROOVE</span>
           </h1>
-          <p className="mt-6 text-sm font-light tracking-[0.25em] text-white/60 uppercase sm:text-base">
-            Soluciones IT&nbsp;&nbsp;|&nbsp;&nbsp;Desarrollo
-            Moderno&nbsp;&nbsp;|&nbsp;&nbsp;Automatización Inteligente
+          <p className="mt-5 text-xs font-light tracking-[0.3em] text-white/50 uppercase sm:text-sm">
+            Soluciones IT&nbsp;&nbsp;·&nbsp;&nbsp;Desarrollo
+            Moderno&nbsp;&nbsp;·&nbsp;&nbsp;Automatización
           </p>
-          <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-6 py-2.5 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white/60" />
-            <span className="text-xs font-semibold tracking-[0.3em] text-white/70 uppercase">
+          <div className="mt-10 inline-flex items-center gap-4 rounded-full border border-white/20 bg-white/5 px-8 py-4 backdrop-blur-sm">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-white/60" />
+            <span className="text-sm font-semibold tracking-[0.3em] text-white/70 uppercase">
               Coming Soon &mdash; 2026
             </span>
           </div>
         </div>
 
+        {/* Neon glow — debajo del video */}
+        <div className="absolute bottom-0 left-1/2 h-56 w-2/3 -translate-x-1/2 rounded-full bg-violet-600/20 blur-[110px]" />
+        <div className="absolute bottom-0 right-1/4 h-40 w-1/3 rounded-full bg-cyan-500/10 blur-[90px]" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
       </section>
 
+      {/* Separador neon */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-500/25 to-transparent" />
+
       {/* ── QUÉ HACEMOS ──────────────────────────────────── */}
-      <section id="que-hacemos" className="bg-zinc-950 px-6 py-24 md:py-32">
+      <section
+        id="que-hacemos"
+        className="relative bg-zinc-950 px-6 py-24 md:py-32 overflow-hidden"
+      >
+        <div className="pointer-events-none absolute left-0 top-1/2 h-[400px] w-40 -translate-y-1/2 rounded-full bg-violet-600/15 blur-[90px]" />
+        <div className="pointer-events-none absolute right-0 top-1/2 h-[400px] w-40 -translate-y-1/2 rounded-full bg-violet-600/15 blur-[90px]" />
         <div className="mx-auto max-w-6xl">
           <p className="mb-4 text-xs font-semibold tracking-[0.4em] text-white/30 uppercase">
             Servicios
@@ -137,58 +148,133 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Separador neon */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
+
       {/* ── QUIÉNES SOMOS ────────────────────────────────── */}
-      <section id="quienes-somos" className="bg-black px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-3xl">
+      <section
+        id="quienes-somos"
+        className="relative bg-black px-6 py-24 md:py-32 overflow-hidden"
+      >
+        {/* Neon laterales */}
+        <div className="pointer-events-none absolute left-0 top-1/2 h-[500px] w-48 -translate-y-1/2 rounded-full bg-violet-600/30 blur-[90px]" />
+        <div className="pointer-events-none absolute right-0 top-1/2 h-[500px] w-48 -translate-y-1/2 rounded-full bg-violet-600/30 blur-[90px]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.12)_0%,_transparent_70%)]" />
+        <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-xs font-semibold tracking-[0.4em] text-white/30 uppercase">
             Nosotros
           </p>
-          <h2 className="mb-10 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
+          <h2 className="mb-2 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
             Quiénes Somos
           </h2>
+          <p className="mb-10 text-base font-light tracking-wide text-white/40">
+            Tecnología con Propósito Humano
+          </p>
           <div className="h-px w-16 bg-white/20 mb-10" />
-          <p className="text-lg font-light leading-[1.9] text-white/60 sm:text-xl">
-            Somos un equipo de{' '}
-            <span className="text-white font-normal">Argentina</span>, enfocados
-            en transformar empresas y brindar mejoras continuas a través de la
-            tecnología. Nos especializamos en{' '}
-            <span className="text-white font-normal">
-              desarrollo a medida, soporte IT y redes
-            </span>
-            , con la misión de llevar eficiencia técnica a cada rincón de{' '}
-            <span className="text-white font-normal">
-              Europa y Latinoamérica
-            </span>
-            .
-          </p>
-          <p className="mt-8 text-lg font-light leading-[1.9] text-white/60 sm:text-xl">
-            Creemos que la tecnología debe ser una solución, no un problema. Por
-            eso, trabajamos de forma{' '}
-            <span className="text-white font-normal">remota</span> bajo un
-            modelo de cercanía: realizamos una{' '}
-            <span className="text-white font-normal">entrevista previa</span>{' '}
-            para entender tu situación específica y, desde ahí, diagramamos el
-            desarrollo o soporte que tu negocio necesita para{' '}
-            <span className="text-white font-normal">no detenerse nunca</span>.
-          </p>
+
+          {/* Foto + intro */}
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-12 mb-12">
+            <div className="shrink-0">
+              <div className="relative h-40 w-40 overflow-hidden rounded-full border border-white/20 ring-4 ring-white/5">
+                <Image
+                  src="/Foto CV.jpg"
+                  alt="Juan Martinez"
+                  fill
+                  className="object-cover [object-position:center_30%]"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-lg font-light leading-[1.9] text-white/60 sm:text-xl">
+                Mi nombre es{' '}
+                <span className="text-white font-normal">Juan Martinez</span>,
+                de{' '}
+                <span className="text-white font-normal">
+                  Córdoba, Argentina
+                </span>
+                , fundador de{' '}
+                <span className="text-white font-normal">THEBULLGROOVE</span>, y
+                lidero un equipo apasionado por transformar la realidad
+                operativa de empresas y emprendedores. Mi camino en el sector
+                tecnológico nació de una pasión genuina por ayudar: me encanta
+                escuchar los desafíos de cada cliente para ofrecer soluciones
+                que realmente marquen una diferencia en su rendimiento laboral y
+                personal.
+              </p>
+              <p className="mt-6 text-lg font-light leading-[1.9] text-white/60 sm:text-xl">
+                Especializados en{' '}
+                <span className="text-white font-normal">
+                  Soporte IT, Redes y Desarrollo a medida
+                </span>
+                , nuestra misión es llevar eficiencia técnica y mejoras
+                continuas a cada rincón de{' '}
+                <span className="text-white font-normal">
+                  Europa y Latinoamérica
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+
+          {/* Cómo ayudamos */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              ¿Cómo ayudamos a potenciar tu negocio?
+            </h3>
+            <p className="mb-8 text-base font-light leading-relaxed text-white/50">
+              Creemos que la tecnología debe ser una solución transparente, no
+              un obstáculo. Por eso, nuestro enfoque se basa en la{' '}
+              <span className="text-white/80">
+                cercanía y la personalización
+              </span>
+              :
+            </p>
+            <ul className="mb-10 space-y-5">
+              {[
+                {
+                  title: 'Desarrollo de Software y Webs desde cero',
+                  desc: 'Creamos herramientas digitales adaptadas a tu flujo de trabajo.',
+                },
+                {
+                  title: 'Automatización inteligente',
+                  desc: 'Optimizamos tus procesos para que ahorres tiempo y recursos.',
+                },
+                {
+                  title: 'Soporte Integral',
+                  desc: 'Brindamos asistencia técnica en Hardware, Software y Redes, configurando tus equipos para alcanzar su máximo potencial.',
+                },
+                {
+                  title: 'Consultoría Tecnológica',
+                  desc: 'Si estás creando tu empresa desde cero, te acompañamos en el diseño de toda tu infraestructura.',
+                },
+              ].map((item) => (
+                <li key={item.title} className="flex gap-4">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
+                  <p className="text-base font-light leading-relaxed text-white/60">
+                    <span className="text-white font-normal">
+                      {item.title}:
+                    </span>{' '}
+                    {item.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <p className="text-lg font-light leading-[1.9] text-white/60 sm:text-xl">
+              Trabajamos de forma{' '}
+              <span className="text-white font-normal">remota</span> bajo un
+              modelo de confianza total. Iniciamos siempre con una{' '}
+              <span className="text-white font-normal">entrevista previa</span>{' '}
+              para entender tu situación específica; desde ahí, diagramamos la
+              estrategia exacta que tu proyecto necesita para{' '}
+              <span className="text-white font-normal">no detenerse nunca</span>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ── CONTACTO ─────────────────────────────────────── */}
-      <section id="contacto" className="bg-zinc-950 px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-2xl">
-          <p className="mb-4 text-xs font-semibold tracking-[0.4em] text-white/30 uppercase">
-            Contacto
-          </p>
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Hablemos
-          </h2>
-          <p className="mb-12 text-sm font-light text-white/40">
-            Contanos tu proyecto y te respondemos a la brevedad.
-          </p>
-          <ContactForm />
-        </div>
-      </section>
+      {/* Separador neon */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-500/25 to-transparent" />
 
       {/* ── FOOTER ───────────────────────────────────────── */}
       <footer className="border-t border-white/10 bg-black px-6 py-8 text-center">

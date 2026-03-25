@@ -1,14 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const links = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Qué Hacemos', href: '#que-hacemos' },
-  { label: 'Quiénes Somos', href: '#quienes-somos' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '/#inicio' },
+  { label: 'Qué Hacemos', href: '/#que-hacemos' },
+  { label: 'Quiénes Somos', href: '/#quienes-somos' },
+  { label: 'Proyectos', href: '/proyectos' },
+  { label: 'Contacto', href: '/contacto' },
 ];
 
 export default function Navbar() {
@@ -18,15 +18,13 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt="THEBULLGROOVE"
-            width={135}
-            height={90}
-            className="object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]"
-            priority
-          />
+        <Link href="/" className="flex flex-col leading-none gap-0.5">
+          <span className="text-2xl font-black tracking-tight text-white">
+            TBG
+          </span>
+          <span className="text-[9px] font-medium tracking-[0.45em] text-white/40 uppercase">
+            THEBULLGROOVE
+          </span>
         </Link>
 
         {/* Desktop nav */}
