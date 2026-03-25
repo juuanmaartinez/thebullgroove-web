@@ -78,6 +78,7 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="auto"
         />
         <div className="absolute inset-0 bg-black/55" />
 
@@ -85,7 +86,7 @@ export default function Home() {
           <p className="mb-4 text-xs font-semibold tracking-[0.5em] text-white/40 uppercase">
             Technology Services Agency
           </p>
-          <h1 className="text-6xl font-black tracking-tight text-white sm:text-8xl lg:text-9xl">
+          <h1 className="text-4xl font-black tracking-tight text-white sm:text-7xl lg:text-9xl">
             THEBULL
             <span className="text-white/25">GROOVE</span>
           </h1>
